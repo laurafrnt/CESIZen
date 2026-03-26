@@ -1,0 +1,53 @@
+## Build and compile folders
+[Bb]in/
+[Oo]bj/
+[Oo]ut/
+
+## Visual Studio / Rider user files
+.vs/
+.idea/
+*.user
+*.userosscache
+*.sln.docstates
+*.suo
+
+## Cache and temporary files
+*.cache
+*.tmp
+*.temp
+*.log
+
+## Mac specific files (useful for MAUI iOS / MacCatalyst)
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+
+## Local configuration files (uncomment to avoid pushing local secrets)
+# appsettings.Development.json
+# appsettings.local.json
+
+## Windows OS generated files
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+
+## Test and code coverage tools
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+[Jj]unit[Rr]esult*/
+[Tt]est[Rr]esults/
+*.coverage
+*.coveragexml
+
+## MAUI / Xamarin specific build outputs
+*.apk
+*.aab
+*.ipa
+*.xap
+*.appx
+*.appxupload
+*.msix
+*.msixupload

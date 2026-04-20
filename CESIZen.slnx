@@ -5,5 +5,4 @@
     <Project Path="src/Shared/Shared.csproj" />
     <Project Path="src/Web/Web.csproj" />
   </Folder>
-  <Project Path="Api/Api.csproj" />
 </Solution>

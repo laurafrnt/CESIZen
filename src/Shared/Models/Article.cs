@@ -9,23 +9,31 @@ namespace CESIZen.Shared.Models
         [Key]
         public int id_article { get; set; }
 
-        [Required]
-        [MaxLength(50)]
+        [Required, MaxLength(150)]
         public string title { get; set; } = string.Empty;
 
-        [MaxLength(5000)]
-        public string? content { get; set; }
+        [Required]
+        public string content { get; set; } = string.Empty;
 
-        public DateTime? creation_at { get; set; }
+        public string? imageUrl { get; set; }
 
-        [ForeignKey("Category")]
+        [Required]
+        public DateTime createdAt { get; set; } = DateTime.UtcNow;
+
+        [Required]
+        public int createdById { get; set; }
+
+        public DateTime? lastUpdatedAt { get; set; }
+
+        [Required]
         public int id_category { get; set; }
 
-        [ForeignKey("User")]
-        public int id_user { get; set; }
-
-        // Navigation properties
+        // Navigation
         public Category? Category { get; set; }
-        public User? User { get; set; }
+
+        [ForeignKey("createdById")]
+        public User? Author { get; set; }
+
+
     }
 }

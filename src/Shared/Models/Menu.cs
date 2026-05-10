@@ -19,7 +19,7 @@ namespace CESIZen.Shared.Models
         [ForeignKey("PageStock")]
         public int id_page_stock { get; set; }
 
-        // Propriété de navigation
+        // Navigation
         public PageStock? PageStock { get; set; }
     }
 }

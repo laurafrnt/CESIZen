@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  sqldata:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: cesizen_sqlserver
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=CesiZen_SecurePassword123! # Mot de passe fort obligatoire pour SQL Server
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqlvolume:/var/opt/mssql
+    restart: unless-stopped
+
+volumes:
+  sqlvolume:

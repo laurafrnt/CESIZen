@@ -21,7 +21,7 @@ namespace CESIZen.Shared.Models
         [Required]
         public bool is_system_page { get; set; }
 
-        // Propriété de navigation
+        // Navigation
         public ICollection<Menu>? Menus { get; set; }
     }
 }

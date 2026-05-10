@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using CESIZen.Shared.Models;
+using Shared.Models;
 
 namespace CESIZen.Shared.Models
 {
@@ -28,7 +29,7 @@ namespace CESIZen.Shared.Models
         [ForeignKey("User")]
         public int id_user { get; set; }
 
-        // Propriétés de navigation
+        // Navigation
         public User? User { get; set; }
         public ICollection<TrackerLog>? TrackerLogs { get; set; }
     }

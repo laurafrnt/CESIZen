@@ -19,7 +19,7 @@ namespace CESIZen.Shared.Models
         [ForeignKey("MoodDetail")]
         public int id_mood_detail { get; set; }
 
-        // Propriétés de navigation
+        // Navigation
         public Profile? Profile { get; set; }
         public MoodDetail? MoodDetail { get; set; }
     }

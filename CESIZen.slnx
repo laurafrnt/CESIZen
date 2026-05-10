@@ -5,4 +5,7 @@
     <Project Path="src/Shared/Shared.csproj" />
     <Project Path="src/Web/Web.csproj" />
   </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/CESIZen.Tests/CESIZen.Tests.csproj" />
+  </Folder>
 </Solution>

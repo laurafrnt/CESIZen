@@ -15,7 +15,7 @@ namespace CESIZen.Shared.Models
         [ForeignKey("MoodPrimary")]
         public int id_mood_primary { get; set; }
 
-        // Propriété de navigation
+        // Navigation
         public MoodPrimary? MoodPrimary { get; set; }
         public ICollection<TrackerLog>? TrackerLogs { get; set; }
     }

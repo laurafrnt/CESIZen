@@ -4,6 +4,15 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Shared.Models
 {
+
+    public enum AcountStatut
+    {
+        Waiting = 0,
+        Active = 1,
+        Deactivated = 2,
+        Deleted = 3
+    }
+
     public class User
     {
         [Key] 
@@ -16,6 +25,7 @@ namespace Shared.Models
         [Required]
         [MaxLength(255)]
         public string password { get; set; } = string.Empty;
+        public AcountStatut statut { get; set; } = AcountStatut.Waiting;
 
         [MaxLength(150)]
         public string? firstname { get; set; }
@@ -32,6 +42,7 @@ namespace Shared.Models
         [ForeignKey("Role")]
         public int id_role { get; set; }
 
+        // Navigation
         public Role? Role { get; set; }
         public Profile? Profile { get; set; }
         public ICollection<Article>? Articles { get; set; }

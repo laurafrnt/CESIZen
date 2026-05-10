@@ -11,7 +11,7 @@ namespace CESIZen.Shared.Models
         [MaxLength(50)]
         public string titre { get; set; } = string.Empty;
 
-        // Propriété de navigation
+        // Navigation
         public ICollection<MoodDetail>? MoodDetails { get; set; }
     }
 }

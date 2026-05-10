@@ -66,9 +66,9 @@ namespace CESIZen.Shared.Data
             modelBuilder.Entity<Article>()
                 .HasKey(a => a.id_article);
             modelBuilder.Entity<Article>()
-                .HasOne(a => a.User)
+                .HasOne(a => a.Author)
                 .WithMany(u => u.Articles)
-                .HasForeignKey(a => a.id_user)
+                .HasForeignKey(a => a.createdById)
                 .OnDelete(DeleteBehavior.Restrict);
             modelBuilder.Entity<Article>()
                 .HasOne(a => a.Category)

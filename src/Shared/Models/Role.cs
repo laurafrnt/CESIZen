@@ -1,3 +1,4 @@
+using Shared.Models;
 using System.ComponentModel.DataAnnotations;
 
 namespace CESIZen.Shared.Models
@@ -14,7 +15,7 @@ namespace CESIZen.Shared.Models
         [MaxLength(255)]
         public string? description { get; set; }
 
-        // Propriété de navigation
+        // Navigation
         public ICollection<User>? Users { get; set; }
     }
 }

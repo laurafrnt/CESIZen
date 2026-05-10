@@ -1,3 +1,4 @@
+using Shared.Models;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -21,7 +22,7 @@ namespace CESIZen.Shared.Models
         [ForeignKey("User")]
         public int id_user { get; set; }
 
-        // Propriété de navigation
+        // Navigation
         public User? User { get; set; }
     }
 }

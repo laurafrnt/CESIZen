@@ -38,9 +38,12 @@ namespace Shared.Models
         public DateTime created_at { get; set; } = DateTime.UtcNow;
 
         public DateTime? updated_at { get; set; }
+        [MaxLength(255)]
+        public string? validation_token { get; set; }
+        public DateTime? validation_token_expires_at { get; set; }
 
         [ForeignKey("Role")]
-        public int id_role { get; set; }
+        public int id_role { get; set; } 
 
         // Navigation
         public Role? Role { get; set; }

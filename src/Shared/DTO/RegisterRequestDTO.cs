@@ -38,8 +38,6 @@ namespace Shared.DTO.CESIZen.Shared.DTOs
         [RegularExpression(@"^\S*$", ErrorMessage = "Le pseudonyme ne doit pas comporter d'espaces.")]
         public string Username { get; set; } = string.Empty;
 
-        public string? Avatar { get; set; }
-
         [MaxLength(50)]
         public string? Gender { get; set; }
     }
